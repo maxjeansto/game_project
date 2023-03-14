@@ -5,26 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
-    
+
     <title>Document</title>
   </head>
   <body>
     <main>
-    
-   <section id="container">
-    <audio id="bo" src="./audio/bo.mp3" preload="auto"></audio>
-    <audio id="click-sound" src="./audio/wingclick2.wav" preload="auto"></audio>
-    <audio id="click-failed" src="./audio/failedclick.mp3" preload="auto"></audio>
+      <section id="container">
+        <audio id="level1-audio" src="./audio/level1-sound.wav"></audio>
+        <audio id="level2-audio" src="./audio/level2-sound.wav"></audio>
+        <audio id="level3-audio" src="./audio/level3-sound.wav"></audio>
+        <audio id="level4-audio" src="./audio/level4-sound.wav"></audio>
+        <audio id="level5-audio" src="./audio/level5-sound.wav"></audio>
+        <audio id="bo" src="./audio/bo.mp3" preload="auto"></audio>
+        <audio
+          id="click-sound"
+          src="./audio/wingclick2.wav"
+          preload="auto"
+        ></audio>
+        <audio
+          id="click-failed"
+          src="./audio/failedclick.mp3"
+          preload="auto"
+        ></audio>
         <div id="game">
-          <button id="btn" data-hover-text="Start Game">Catch Me If you Can Game</button>
+          <button id="btn" data-hover-text="Start Game">
+            Catch Me If you Can Game
+          </button>
           <div id="gamepad">
-            <div id="content"><div id="moving-div"> <img src="./img/lc.png" alt="Image de Leonardo DiCaprio"></div></div>
-            
-            <footer class="footer"> 
+            <div id="content"><div id="moving-div"></div></div>
+
+            <footer class="footer">
               <div class="footer-columns">
                 <div class="footer-column">
                   <h3>Score</h3>
-                   <p id="score">0</p>
+                  <p id="score">0</p>
                 </div>
                 <div class="footer-column">
                   <h3>To the next level</h3>
@@ -32,33 +46,29 @@
                 </div>
                 <div class="footer-column">
                   <h3>Level</h3>
-                    <p id="level">1</p>
+                  <p id="level">1</p>
                 </div>
                 <div class="footer-column">
                   <h3>Missed Clicks</h3>
-                    <p id="missed">0</p>
+                  <p id="missed">0</p>
                 </div>
                 <div class="footer-column">
                   <h3>Timer</h3>
-                    <p id="counter">60</p>
+                  <p id="counter">60</p>
                 </div>
               </div>
-              
+            </footer>
           </div>
-         
         </div>
-       
+
         <div id="top-players">
           <h2 class="section-title">Top Players</h2>
-          <div class="players">
-          </div>
-        </div> 
-        
-       
+          <div class="players"></div>
+        </div>
+      </section>
       <!-- </section> -->
     </main>
-    
+
     <script src="./js/main.js" type="module"></script>
-   
   </body>
 </html>

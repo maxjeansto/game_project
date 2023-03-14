@@ -164,7 +164,7 @@ function target() {
 
 
 content.addEventListener("click", function (evt) {
-  if (!gameOver && gameStarted && evt.target === img) {
+  if (!gameOver && gameStarted && evt.target === bar) {
     clickcount++;
     console.log("nombre de click sur la barre" + clickcount);
     scoreint += 10 * levelinit;
@@ -208,6 +208,21 @@ content.addEventListener("click", function (evt) {
     );
     escapeDelay -= 50;
     console.log(escapeDelay);
+    if (levelinit === 1) {
+      const level1Audio = document.getElementById("level1-audio");
+      level1Audio.play();
+    } else if (levelinit === 2) {
+      const level2Audio = document.getElementById("level2-audio");
+      level2Audio.play();
+    } else if (levelinit === 3) {
+      const level3Audio = document.getElementById("level3-audio");
+      level3Audio.play();
+    } else if (levelinit === 4) {
+      const level4Audio = document.getElementById("level4-audio");
+      level4Audio.play();
+    } else if (levelinit === 5) {
+      const level5Audio = document.getElementById("level5-audio");
+      level5Audio.play();}
     if (levelinit === 6) {
       endGame();
       gameOver = true;

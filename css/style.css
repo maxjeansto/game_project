@@ -163,21 +163,12 @@ hr {
   width: 15%;
   /* transition: var(--transition-duration) ease; */
   transition: top 0.15s ease, left 0.15s ease;
-}
-#moving-div img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(
-    -50%,
-    -50%
-  ); /* centre l'image horizontalement et verticalement */
-  height: 80%;
-  width: 80%;
-  object-fit: cover; /* ajuste la taille de l'image pour remplir le div */
+  background-image: url(../img/lc.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-#moving-div img:hover {
+#moving-div:hover {
   cursor: grab;
 }
 
