@@ -175,7 +175,7 @@ content.addEventListener("click", function (evt) {
     scoreDisplay.classList.add("score-increase");
     setTimeout(function () {
       scoreDisplay.classList.remove("score-increase");
-    }, 1000);
+    }, 3000);
     evt.preventDefault();
   } else if (!gameOver && gameStarted) {
     missedclick++;
