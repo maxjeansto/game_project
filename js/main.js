@@ -94,11 +94,29 @@ leaderboard.forEach(function (obj) {
   const date = new Date(obj.timestamp);
   const dateString = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
   PlayersDiv.innerHTML += `
-    <div class="player" title="Inscrit le ${dateString}">
-      <img src="${obj.img}"/>
+    <div class="player" data-date="${dateString}">
+      <div class="image-container">
+        <img src="${obj.img}" class="player-image" />
+        <div class="date-overlay">${dateString}</div>
+      </div>
       <span class="player-name">${obj.name} <br> <p class = "score">High Score : ${obj.score}</p></span>
     </div>`;
 });
+
+
+// Ajoutez des écouteurs d'événements aux images des joueurs
+const playerImages = document.querySelectorAll(".player-image");
+
+playerImages.forEach((image) => {
+  image.addEventListener("mouseover", function () {
+    image.style.boxShadow = "0px 4px 8px rgba(0, 0, 0, 0.2)";
+  });
+
+  image.addEventListener("mouseout", function () {
+    image.style.boxShadow = "";
+  });
+});
+
 
 function startGame() {
   reset();
