@@ -91,8 +91,10 @@ if (!localStorage.getItem("leaderboard")) {
 const PlayersDiv = document.querySelector(".players");
 
 leaderboard.forEach(function (obj) {
+  const date = new Date(obj.timestamp);
+  const dateString = `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
   PlayersDiv.innerHTML += `
-    <div class="player">
+    <div class="player" title="Inscrit le ${dateString}">
       <img src="${obj.img}"/>
       <span class="player-name">${obj.name} <br> <p class = "score">High Score : ${obj.score}</p></span>
     </div>`;
