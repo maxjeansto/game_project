@@ -119,6 +119,7 @@ playerImages.forEach((image) => {
 
 
 function startGame() {
+  alert("are you ready ?");
   reset();
   countdown();
   target();
@@ -340,5 +341,6 @@ function endGame() {
 
   // Réinitialiser le jeu
   audio.pause();
+  audio.currentTime = 0;
   reset();
 }
